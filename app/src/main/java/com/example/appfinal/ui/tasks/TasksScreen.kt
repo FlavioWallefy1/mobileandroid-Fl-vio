@@ -26,7 +26,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.foundation.shape.RoundedCornerShape
 
-// --- MUDANÇA VISUAL NOVA: Gradiente no topo da tela ---
 import androidx.compose.ui.graphics.Brush
 
 @Composable
@@ -65,7 +64,6 @@ fun TasksListComponent(
             .fillMaxSize()
     ) {
 
-        // --- MUDANÇA VISUAL NOVA: Header com gradiente e padding grande ---
         Box(
             modifier = Modifier
                 .fillMaxWidth()

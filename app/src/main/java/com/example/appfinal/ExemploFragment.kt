@@ -1,4 +1,4 @@
-package com.example.appfinal // <- VERIFIQUE SE O PACOTE ESTÁ CORRETO
+package com.example.appfinal
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/shelfFragment"> <fragment
+    android:id="@+id/shelfFragment"
+    android:name="com.example.appfinal.ShelfFragment"
+    android:label="Estante"
+    tools:layout="@layout/fragment_shelf">
+
+    <action
+        android:id="@+id/action_shelfFragment_to_bookDetailFragment"
+        app:destination="@id/bookDetailFragment" />
+</fragment>
+
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.example.appfinal.WishlistFragment"
+        android:label="Lista de Desejos"
+        tools:layout="@layout/fragment_wishlist" />
+
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.example.appfinal.ProgressFragment"
+        android:label="Progresso"
+        tools:layout="@layout/fragment_progress" />
+
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.example.appfinal.BookDetailFragment"
+        android:label="Detalhes do Livro"
+        tools:layout="@layout/fragment_book_detail">
+
+        <argument
+            android:name="bookTitle"
+            app:argType="string"
+            android:defaultValue="Livro Desconhecido" />
+    </fragment>
+
+</navigation>

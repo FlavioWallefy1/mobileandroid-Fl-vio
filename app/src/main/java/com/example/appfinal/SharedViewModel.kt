@@ -1,4 +1,4 @@
-package com.example.appfinal // <- VERIFIQUE SE O PACOTE ESTÁ CORRETO
+package com.example.appfinal
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

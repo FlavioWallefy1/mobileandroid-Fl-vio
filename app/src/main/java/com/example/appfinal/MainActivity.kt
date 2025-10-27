@@ -1,36 +1,27 @@
-package com.example.appfinal // <- VERIFIQUE SE O PACOTE ESTÁ CORRETO
+package com.example.appfinal
 
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import com.example.appfinal.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val sharedViewModel: SharedViewModel by viewModels()
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ExemploFragment())
-                .commit()
-        }
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
-        binding.button1.setOnClickListener {
-            sharedViewModel.enviarMensagem("Botão 1 foi clicado!")
-        }
+        navController = navHostFragment.navController
 
-        binding.button2.setOnClickListener {
-            sharedViewModel.enviarMensagem("Agora foi o Botão 2!")
-        }
-
-        binding.button3.setOnClickListener {
-            sharedViewModel.enviarMensagem("Por último, o Botão 3!")
-        }
+        NavigationUI.setupWithNavController(binding.bottomNavView, navController)
     }
 }

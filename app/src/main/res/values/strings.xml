@@ -1,8 +1,6 @@
 <resources>
-    <string name="app_name">Tasks</string>
-    <string name="delete">Deletar tarefa</string>
-    <string name="edit_task">Editar tarefa</string>
-    <string name="edit_task_title">Novo título</string>
-    <string name="save">Salvar</string>
-    <string name="empty_title_msg">O título não pode ficar vazio</string>
+    <string name="hint_task_title">Título da tarefa</string>
+    <string name="add">Adicionar</string>
+    <string name="delete">Remover</string>
+    <string name="app_name">Nome do Seu Aplicativo</string>
 </resources>
